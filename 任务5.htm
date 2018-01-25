@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>任务5</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<style>
+body {
+	margin: 0;
+	padding: 0;
+}
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 1rem 0;
+	background: #68cdd5;
+	color: #ffffff;
+}
+.left {
+	position: absolute;
+	left: 1rem;
+}
+.footer {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: #FFF;
+}
+/*页脚flex布局 margin固定 width自适应*/
+.footer > div {
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	margin: 0.5rem;
+	padding: 0;
+	text-align: center;
+}
+.c1 {
+	background-image: url(images/img10.png);
+	background-size: cover;
+	width: 100%;
+	height: 13rem;
+	padding: 0;
+	margin: 0;
+	color: #ffffff;
+}
+.c2 {
+	width: 100%;
+	height: 3rem;
+	line-height: 3rem;
+	padding: 0;
+	margin: 0;
+	border-bottom: 1px solid #888;
+}
+.c3 {
+	width: 96%;
+	height: 3rem;
+	line-height: 3rem;
+	padding: 0;
+	margin: 0 2%;
+	border-bottom: 1px solid #888;
+}
+.c4 {
+	width: 5rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	padding: 0;
+	margin: 0.75rem 0.75rem 0.75rem 0.5rem;
+	border-right: 1px solid #888;
+	float: left;
+	color: #888;
+}
+.c5 {
+	width: 96%;
+	margin: 0 2% 5rem 2%;
+	border-bottom: 1px solid #888;
+	padding: 0.75rem 0;
+	line-height: 1.5rem;
+	position: relative;
+}
+.c6 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 5rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	padding: 0;
+	margin: auto 0.5rem;
+	border-right: 1px solid #888;
+	color: #888;
+}
+.img1 {
+	float: left;
+	width: 5rem;
+	height: 5rem;
+	margin: 5.5rem 1rem 0 1rem;
+}
+.img2 {
+	width: 0.62rem;
+	height: 0.9rem;
+	margin: 0 0.5rem 0 0;
+}
+.img3 {
+	width: 0.2rem;
+	height: 1rem;
+	margin: 0 0.5rem;
+	vertical-align: middle;
+}
+.img4 {
+	width: 0.9rem;
+	height: 0.9rem;
+	margin: 0 0.3rem;
+}
+.footer a {
+	display: block;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	line-height: 2.5rem;
+	text-decoration: none;
+	color: #68cdd5;
+	background: #ffffff;
+	border: 2px solid #68cdd5;
+	border-radius: 6px;
+}
+/*链接文字点击特效*/
+a:active span {
+	position: relative;
+	top: 1px;
+	left: 1px;
+}
+span {
+	vertical-align: middle;
+}
+</style>
+</head>
+
+<body>
+<div class="header"> <span class="left"><b>&lt;</b></span> <span><b>个人主页</b></span> </div>
+<div class="c1"> <img class="img1" src="images/img7.png" width="169" height="170">
+  <div style="padding:6.5rem 0 0 0;"><span style="font-size:1.2rem; font-weight:bold;">某某&nbsp;XX岁</span><br/>
+    <span style="line-height:2rem;"><img class="img2" src="images/img8.png" width="18" height="23">河北&nbsp;石家庄</span> </div>
+</div>
+<div class="c2"> <img class="img3" src="images/img11.png" width="3" height="26"><span>专业技能</span> </div>
+<div class="c3"><img class="img4" src="images/img9.png" width="24" height="23">XXX&nbsp;&nbsp;<img class="img4" src="images/img9.png" width="24" height="23">XXX</div>
+<div class="c3">
+  <div class="c4">从业年限</div>
+  <span>XX年</span> </div>
+<div class="c3">
+  <div class="c4">工作时间</div>
+  <span>XX点 ~ XX点</span> </div>
+<div class="c3">
+  <div class="c4">服务价格</div>
+  <span style="color:red;">XX元/小时</span> </div>
+<div class="c5">
+  <div class="c6" >自我介绍</div>
+  <div style="margin:0 0 0 6.25rem;">这是一段自我介绍这是一段自我介绍这是一段自我介绍这是一段自我介绍这是一段自我介绍这是一段自我介绍这是一段自我介绍这是一段自我介绍这是一段自我介绍。</div>
+</div>
+<div class="footer">
+  <div><a href="#"><span>留言</span></a></div>
+  <div style="margin-left:0;"><a href="#" style="background:#68cdd5; color:#ffffff;"><span>电话联系</span></a></div>
+</div>
+</body>
+</html>
