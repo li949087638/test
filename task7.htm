@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>任务7</title>
+    <meta charset="utf-8">
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <style>
+    body {
+        background: #f0f0f0;
+    }
+
+    header {
+        background: #29bde0;
+        padding: 1rem 1.5rem;
+        position: relative;
+    }
+
+    header>.btn {
+        width: 2.6rem;
+        padding: 0.5rem;
+        background: none;
+        border: none;
+    }
+
+    header>.btn:hover,
+    header>.btn:focus {
+        background: #1866c7;
+        border: none;
+    }
+
+    .icon {
+        border: 1px solid #fff;
+        height: 0;
+    }
+
+
+    main {
+        padding: 1rem 2rem 1rem;
+        text-align: center;
+    }
+
+    .last {
+        width: 100%;
+        background: #fff;
+        border: 1px solid #d0d0d0;
+        padding: 1.5rem 3rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .last a {
+        text-decoration: none;
+        color: #9a9a9a;
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .arrow {
+        position: absolute;
+        right: 4rem;
+        font-family: Serif;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .div1 {
+        width: 100%;
+        background: #fff;
+        border: 1px solid #d0d0d0;
+        margin-top: 1rem;
+    }
+
+    .div1-1 {
+        color: #fbb435;
+        padding: 1rem;
+        font-size: 2rem;
+        border-bottom: 1px solid #fbb435;
+    }
+
+    .div1-2 {
+        padding: 0 3rem;
+        color: #9a9a9a;
+        position: relative;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .triangle {
+        border-color: transparent transparent transparent #fbb435;
+        border-style: solid;
+        border-width: 1.4rem;
+        height: 0;
+        width: 0;
+        position: absolute;
+        right: -0.5rem;
+        top: 13rem;
+    }
+
+    .div1-2 a {
+        display: inline-block;
+        padding: 2rem 0;
+        margin: 1rem 0;
+        background: #29bde0;
+        text-decoration: none;
+        color: #fff;
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .footer {
+        padding: 0.1rem;
+    }
+
+    .footer span {
+        display: inline-block;
+        background: #9a9a9a;
+        border-radius: 50%;
+        width: 0.8rem;
+        height: 0.8rem;
+        margin: 0 0.2rem;
+    }
+
+    .footer span:hover {
+        background: #29bde0;
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+            <div class="icon"></div>
+            <div class="icon" style="margin: 0.5rem 0"></div>
+            <div class="icon"></div>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">功能1</a></li>
+            <li><a href="#">功能2</a></li>
+            <li><a href="#">功能3</a></li>
+            <li class="divider"></li>
+            <li><a href="index.htm">主页</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="last">
+            <a href="task7-1.htm">上次游戏：捉鬼猜词版<span class="arrow">&gt;</span></a>
+        </div>
+        <div class="div1">
+            <div class="div1-1">捉鬼游戏</div>
+            <div class="div1-2"><a href="#">简化版</a>
+                <br/>有112233个用户正在玩此款游戏
+                <br/><a href="task7-1.htm">猜词版</a>
+                <br/>有112233个用户正在玩此款游戏
+                <br/><a href="#">白痴版</a>
+                <br/>有112233个用户正在玩此款游戏
+                <div class="triangle"></div>
+                <div class="footer"><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
