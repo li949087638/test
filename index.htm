@@ -4,55 +4,87 @@
 <head>
     <title>李超的网站</title>
     <meta charset="utf-8">
-    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
     <script src="jquery/jquery-3.3.1.min.js"></script>
     <script src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
-    <style>
-    h3 {
-        background: #68cdd5;
-        text-align: center;
-        padding: 1rem 0;
-    }
-
-    a {
-        display: block;
-        width: 6rem;
-        margin: 1.5rem 0;
-        line-height: 3rem;
-        text-decoration: none;
-        text-align: center;
-        color: #000000;
-        background: #68cdd5;
-        -webkit-box-shadow: 4px 4px 10px 0px #666;
-        box-shadow: 4px 4px 10px 0px #666;
-    }
-
-    a:hover,
-    a:active {
-        text-decoration: none;
-        background: #39C;
-        color: #000;
-    }
-    </style>
 </head>
 
-<body ontouchstart>
-    <h3>欢迎光临，我的第一个网站！</h3>
+<body>
+    <header class="bg-primary"><div class="container">欢迎光临，我的网站！
+        <p>以下这些是我自学以来，从易到难一步步做过的网页</p></div>
+    </header>
     <div class="container">
+        <div class="title bg-success">一、移动端页面（自适应）</div>
         <div class="row">
-            <div class="col-xs-3">
-                <div><a href="task1.htm">网页1</a></div>
-                <div><a href="task3.htm">网页2</a></div>
-                <div><a href="task4.htm">网页3</a></div>
-                <div><a href="task5.htm">网页4</a></div>
-                <div><a href="task6.htm">网页5</a></div>
-                <div><a href="task7.htm">网页6</a></div>
-                <div><a href="task7-1.htm">网页6-1</a></div>
-                <div><a href="task7-2.htm">网页6-2</a></div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">网页1</h3>
+                    </div>
+                    <div class="panel-body">一个根据屏幕宽度自适应的九宫格</div>
+                    <a href="task1.htm" class="btn btn-info">进入</a></div>
             </div>
-            <div class="col-xs-9">
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">网页2</h3>
+                    </div>
+                    <div class="panel-body">简单的移动端页面</div><a href="task3.htm" class="btn btn-info">进入</a></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">网页3</h3>
+                    </div>
+                    <div class="panel-body">常见的登录界面</div><a href="task4.htm" class="btn btn-info">进入</a></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">网页4</h3>
+                    </div>
+                    <div class="panel-body">个人简介页面</div><a href="task5.htm" class="btn btn-info">进入</a></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">网页5</h3>
+                    </div>
+                    <div class="panel-body">较复杂的列表页</div><a href="task6.htm" class="btn btn-info">进入</a></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">网页6</h3>
+                    </div>
+                    <div class="panel-body">一个WebAPP的游戏版本选择界面（bootstrap框架）</div><a href="task7.htm" class="btn btn-info">进入</a></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">网页6-1</h3>
+                    </div>
+                    <div class="panel-body">游戏界面（bootstrap框架）</div><a href="task7-1.htm" class="btn btn-info">进入</a></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">网页6-2</h3>
+                    </div>
+                    <div class="panel-body">游戏结束界面（bootstrap框架）</div><a href="task7-2.htm" class="btn btn-info">进入</a></div>
+            </div>
+        </div>
+        <div class="title bg-success">二、PC端页面（响应式）</div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">网页7</h3>
+                    </div>
+                    <div class="panel-body">一个企业网站主页</div><a href="task8.htm" class="btn btn-info">进入</a></div>
             </div>
         </div>
     </div>

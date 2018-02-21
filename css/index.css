@@ -1,0 +1,29 @@
+﻿header {
+    margin-bottom: 1.5rem;
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+header p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.title{
+    height: 5rem;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    font-weight: 700;
+}
+.panel{
+    height: 16rem;
+    position: relative;
+}
+.panel-title{
+    text-align: center;
+}
+.btn {
+    width: 60%;
+    margin: 0 20%;
+    position: absolute;
+    bottom: 0.6rem;
+}

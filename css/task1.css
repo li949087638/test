@@ -1,0 +1,18 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 97vw;
+    margin: 1.5vw;
+}
+
+.float {
+    width: 30%;
+    padding: 15% 0;
+    background: orange;
+    float: left;
+    margin: 1.5%;
+    border-radius: 10px;
+}

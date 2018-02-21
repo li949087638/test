@@ -1,0 +1,164 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0;
+    background: #68cdd5;
+    color: #ffffff;
+}
+
+a.left {
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.footer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #FFF;
+}
+
+
+/*页脚flex布局 margin固定 width自适应*/
+
+.footer>div {
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin: 0.5rem;
+    padding: 0;
+    text-align: center;
+}
+
+.c1 {
+    background-image: url(../images/img10.png);
+    background-size: cover;
+    width: 100%;
+    height: 13rem;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+}
+
+.c2 {
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #888;
+}
+
+.c3 {
+    width: 96%;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0;
+    margin: 0 2%;
+    border-bottom: 1px solid #888;
+}
+
+.c4 {
+    width: 5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    padding: 0;
+    margin: 0.75rem 0.75rem 0.75rem 0.5rem;
+    border-right: 1px solid #888;
+    float: left;
+    color: #888;
+}
+
+.c5 {
+    width: 96%;
+    margin: 0 2% 5rem 2%;
+    border-bottom: 1px solid #888;
+    padding: 0.75rem 0;
+    line-height: 1.5rem;
+    position: relative;
+}
+
+.c6 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    padding: 0;
+    margin: auto 0.5rem;
+    border-right: 1px solid #888;
+    color: #888;
+}
+
+.img1 {
+    float: left;
+    width: 5rem;
+    height: 5rem;
+    margin: 5.5rem 1rem 0 1rem;
+}
+
+.img2 {
+    width: 0.62rem;
+    height: 0.9rem;
+    margin: 0 0.5rem 0 0;
+}
+
+.img3 {
+    width: 0.2rem;
+    height: 1rem;
+    margin: 0 0.5rem;
+    vertical-align: middle;
+}
+
+.img4 {
+    width: 0.9rem;
+    height: 0.9rem;
+    margin: 0 0.3rem;
+}
+
+.footer a {
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 2.5rem;
+    text-decoration: none;
+    color: #68cdd5;
+    background: #ffffff;
+    border: 2px solid #68cdd5;
+    border-radius: 6px;
+}
+
+
+/*链接文字点击特效*/
+
+a:active span {
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+
+span {
+    vertical-align: middle;
+}

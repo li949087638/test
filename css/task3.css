@@ -1,0 +1,47 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background: #68cdd5;
+}
+
+.container {
+
+    margin: 0;
+    padding: 0 13% 5%;
+}
+
+.center {
+    margin: 0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.left {
+    float: left;
+    text-align: center;
+}
+
+.right {
+    float: right;
+    text-align: center;
+}
+
+p {
+    font-size: 0.75em;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.text {
+    margin: 0;
+    padding: 20px 0 100px 0;
+    line-height: 180%;
+    letter-spacing: 1px;
+}
+
+a.back {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0;
+    padding: 15px 10px;
+}
