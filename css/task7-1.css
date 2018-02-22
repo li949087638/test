@@ -179,8 +179,7 @@ main {
 .menu {
     display: none;
     position: absolute;
-    top: 50%;
-    margin-top: -2vw;
+    top: 22vw;
     white-space: nowrap;
 }
 
