@@ -302,6 +302,7 @@ header .right {
     margin-left: 2rem;
     line-height: initial;
     vertical-align: middle;
+    white-space: normal;
 }
 
 .carousel-indicators {
@@ -309,7 +310,7 @@ header .right {
 }
 
 .div1 {
-    margin-top: 10rem;
+    margin-top: 8rem;
 }
 
 .div2 {
@@ -320,19 +321,35 @@ header .right {
     text-align: center;
 }
 
-.div2-1 {
-    margin-right: 8rem;
-}
-
-.div2-2 {
-    margin-right: 5rem;
-}
-
 .div2-3 {
     border-left: 1px dashed #999;
     padding: 3rem 0 0 5rem;
     text-align: left;
 }
+
+@media (max-width: 767px) {
+    .div2 {
+        width: 100%;
+        padding: 0 4rem;
+    }
+    .div2-3 {
+        border-left: none;
+        padding: 0 4rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .div2-1 {
+        margin-right: 8rem;
+    }
+
+    .div2-2 {
+        margin-right: 5rem;
+    }
+}
+
+
+
 
 .div3 {
     margin: 6rem 0 2rem;
@@ -361,6 +378,12 @@ header .right {
     text-align: center;
 }
 
+@media (max-width: 767px) {
+    .div4-1 {
+        margin: 2rem auto;
+    }
+}
+
 .div5 {
     display: -webkit-flex;
     display: flex;
@@ -373,8 +396,16 @@ header .right {
 .div5>a {
     display: -webkit-flex;
     display: flex;
+    -webkit-flex: 1;
     flex: 1;
     padding: 4rem 2rem;
+}
+
+@media (max-width: 767px) {
+    .div5>a {
+        -webkit-flex: 1 100%;
+        flex: 1 100%;
+    }
 }
 
 .div5>a>span {
@@ -406,6 +437,12 @@ header .right {
     color: #888;
 }
 
+.div7 {
+    display: inline-block;
+    line-height: 9rem;
+    white-space: nowrap;
+}
+
 .p1 {
     margin: 1rem auto;
     font-size: 2rem;
@@ -414,6 +451,7 @@ header .right {
 
 .p2 {
     color: #888;
+    text-align: left;
 }
 
 .p3 {
@@ -483,8 +521,10 @@ footer a {
     display: inline-block;
     margin-top: 2.5rem;
 }
-.copyright{
-	text-align: center;
-	border-top: 1px solid #26c184;
-	padding: 0.5rem 0;
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #26c184;
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
 }
