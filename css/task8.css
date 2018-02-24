@@ -158,10 +158,7 @@ header .right {
     height: 3rem;
     background-size: 32.038rem 13.755rem;
     background-position: -24.17rem -10.245rem;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
+    margin-top: 2rem;
 }
 .bg-green {
     background-color: #26a26f;
@@ -228,6 +225,7 @@ header .right {
         border-bottom: none;
     }
     .icon19{
+        margin-top: 0.7rem;
         margin-left: 15px;
     }
 }
@@ -374,8 +372,8 @@ header .right {
 
 @media (max-width: 767px) {
     .div5>a {
-        -webkit-flex: 1 80%;
-        flex: 1 80%;
+        -webkit-flex: 1 100%;
+        flex: 1 100%;
     }
 }
 
@@ -542,7 +540,7 @@ header .right {
 }
 
 .div9-1 {
-    border-bottom: 1px solid #888;
+    border-bottom: 1px solid #ccc;
     padding: 2rem 0;
     text-align: center;
 }
@@ -574,7 +572,7 @@ header .right {
 .div9-3 {
     display: -webkit-flex;
     display: flex;
-    border-bottom: 1px solid #888;
+    border-bottom: 1px solid #ccc;
     padding: 2rem;
 }
 .div9-3 .sprites{
@@ -583,4 +581,19 @@ header .right {
 .div9 p{
     text-indent: 2em;
     margin: 2rem;
+}
+.div11{
+    color: #888;
+    border:1px solid;
+    border-color: #ccc transparent #eee transparent;
+    padding: 1.5rem 0;
+}
+.div11 a{
+    margin:0 1rem;
+}
+.div12{
+    font-size: 1.8rem;
+    line-height: 6rem;
+    font-weight: 700;
+    border-bottom:1px solid #ccc;
 }
