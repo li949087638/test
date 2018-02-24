@@ -1,6 +1,5 @@
 ﻿header {
-    margin-bottom: 1.5rem;
-    padding: 1rem 0;
+    padding: 1.5rem 0 1rem;
     font-size: 2.5rem;
     font-weight: 700;
 }
@@ -9,13 +8,13 @@ header p {
     font-weight: 500;
 }
 .title{
-    height: 5rem;
-    margin-bottom: 1rem;
-    padding: 1rem 0;
+    line-height: 5rem;
+    margin-top: 1rem;
     font-weight: 700;
+    font-size: 1.8rem;
 }
 .panel{
-    height: 16rem;
+    height: 15rem;
     position: relative;
 }
 .panel-title{

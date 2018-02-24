@@ -113,35 +113,35 @@ header .right {
 }
 
 .icon13 {
-    width: 10.8679rem;
+    min-width: 10.8679rem;
     height: 4rem;
     background-size: 42.717rem 18.3396rem;
     background-position: 0 -8.9057rem;
 }
 
 .icon14 {
-    width: 3.655rem;
+    min-width: 3.655rem;
     height: 4rem;
     background-size: 39.034rem 16.759rem;
     background-position: -12.759rem -12.483rem;
 }
 
 .icon15 {
-    width: 11.167rem;
+    min-width: 11.167rem;
     height: 4rem;
     background-size: 47.167rem 20.25rem;
     background-position: -12.833rem -9.833rem;
 }
 
 .icon16 {
-    width: 13rem;
+    min-width: 13rem;
     height: 3rem;
     background-size: 43.538rem 18.692rem;
     background-position: -19.077rem -13.923rem;
 }
 
 .icon17 {
-    width: 8.857rem;
+    min-width: 8.857rem;
     height: 4rem;
     background-size: 40.429rem 17.357rem;
     background-position: -21.286rem -8.429rem;
@@ -161,15 +161,20 @@ header .right {
 
 .navbar {
     margin-bottom: 0;
-}
-
-.navbar-right {
-    margin-right: -45px;
-}
-
-.navbar-default {
-    background-color: transparent;
     border: none;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0;
+    }
+    .navbar-right {
+        margin-right: -45px;
+    }
+    .navbar-nav>li>a {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -191,7 +196,6 @@ header .right {
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
     color: #fff;
-    background-color: transparent;
 }
 
 .navbar-default .navbar-nav>.active>a,
@@ -219,39 +223,6 @@ header .right {
 .navbar-nav>li>a {
     padding-left: 30px;
     padding-right: 30px;
-}
-
-@media (min-width: 768px) {
-    .navbar-nav>li>a {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-}
-
-.navbar-collapse {
-    border-top: 0px solid transparent;
-}
-
-.nav.item a {
-    color: #fff;
-}
-
-.nav.item>.active>a,
-.nav.item>.active>a:hover,
-.nav.item>.active>a:focus {
-    background-color: #007000;
-}
-
-#navbar-collapse {
-    border-top: 1px solid #aaa;
-}
-
-.navbar-toggle {
-    margin-right: 0;
-}
-
-.carousel {
-    height: ;
 }
 
 .carousel-control {
@@ -296,15 +267,6 @@ header .right {
     font-size: 3.6vw;
 }
 
-.span4 {
-    display: inline-block;
-    width: 12rem;
-    margin-left: 2rem;
-    line-height: initial;
-    vertical-align: middle;
-    white-space: normal;
-}
-
 .carousel-indicators {
     bottom: 0;
 }
@@ -347,9 +309,6 @@ header .right {
         margin-right: 5rem;
     }
 }
-
-
-
 
 .div3 {
     margin: 6rem 0 2rem;
@@ -408,7 +367,7 @@ header .right {
     }
 }
 
-.div5>a>span {
+.div5 .sprites {
     margin: auto;
 }
 
@@ -439,8 +398,22 @@ header .right {
 
 .div7 {
     display: inline-block;
-    line-height: 9rem;
+    height: 9rem;
     white-space: nowrap;
+}
+
+.span4 {
+    display: inline-block;
+    width: 12rem;
+    margin-left: 2rem;
+    vertical-align: middle;
+    white-space: normal;
+}
+
+@media (max-width: 767px) {
+    .div7 {
+        margin-left: 3rem;
+    }
 }
 
 .p1 {
@@ -509,7 +482,7 @@ header .right {
     font-size: 1.8rem;
 }
 
-footer a {
+.span5 a {
     text-decoration: none;
     color: #fff;
     font-size: 1.4rem;
@@ -527,4 +500,69 @@ footer a {
     border-top: 1px solid #26c184;
     padding: 0.5rem 0;
     font-size: 1.2rem;
+}
+
+.div8 {
+    margin: 1rem 0 2rem;
+}
+
+.a1 {
+    text-decoration: none;
+    color: #000;
+}
+
+.div10 {
+    margin-bottom: 5rem;
+}
+
+.div9 {
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+}
+.col-xs-9.div9{
+    margin-left: 5%;
+}
+
+.div9-1 {
+    border-bottom: 1px solid #888;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.circle {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #ff650e;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.div9-2:hover .circle {
+    background-color: #f9a372;
+}
+
+.div9-2 {
+    margin: 1rem auto;
+    width: 8rem;
+}
+
+.div9-2 a {
+    text-decoration: none;
+    color: #26a26f;
+    font-weight: 700;
+}
+
+.div9-3 {
+    display: -webkit-flex;
+    display: flex;
+    border-bottom: 1px solid #888;
+    padding: 2rem;
+}
+.div9-3 .sprites{
+    margin: auto 2rem auto 0;
+}
+.div9 p{
+    text-indent: 2em;
+    margin: 2rem;
 }
