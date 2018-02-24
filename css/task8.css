@@ -153,7 +153,16 @@ header .right {
     background-size: 49.217rem 21.13rem;
     background-position: -41.217rem 0rem;
 }
-
+.icon19{
+    width: 6.283rem;
+    height: 3rem;
+    background-size: 32.038rem 13.755rem;
+    background-position: -24.17rem -10.245rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
 .bg-green {
     background-color: #26a26f;
     color: #fff;
@@ -217,6 +226,9 @@ header .right {
     .navbar-default .navbar-nav>.active>a:focus {
         background-color: #007000;
         border-bottom: none;
+    }
+    .icon19{
+        margin-left: 15px;
     }
 }
 
@@ -362,8 +374,8 @@ header .right {
 
 @media (max-width: 767px) {
     .div5>a {
-        -webkit-flex: 1 100%;
-        flex: 1 100%;
+        -webkit-flex: 1 80%;
+        flex: 1 80%;
     }
 }
 
@@ -442,17 +454,15 @@ header .right {
 .round {
     display: inline-block;
     width: 5rem;
-    height: 5rem;
+    line-height: 5rem;
     border-radius: 50%;
     -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, .25);
     box-shadow: 0 1px 5px rgba(0, 0, 0, .25);
     text-align: center;
-    padding-top: 1.6rem;
     color: #26a26f;
     font-size: 2rem;
     font-weight: 700;
     vertical-align: middle;
-    line-height: initial;
 }
 
 .dot {
@@ -488,11 +498,19 @@ header .right {
     font-size: 1.4rem;
 }
 
-.span6 {
+.qrcode {
     float: right;
-    font-size: 1.6rem;
-    display: inline-block;
+    text-align: center;
     margin-top: 2.5rem;
+}
+@media(max-width: 767px){
+    .qrcode{
+        float: none;
+    }
+    .span5{
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .copyright {
