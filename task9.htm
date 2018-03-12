@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>任务9</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/task9.css" rel="stylesheet">
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <span class="tel">客服热线：010-12345678</span>
+            <div class="pull-right">
+                <a href="">登录</a><a href="">注册</a>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="">首页</a></li>
+                    <li><a href="">在线定制</a></li>
+                    <li><a href="">标准箱</a></li>
+                    <li><a href="">品质保障</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="process">
+            <div class="step active">
+                <div class="s1"></div>
+                <div class="s2">1</div>
+                <div class="s1"></div>
+                <div class="s3">1.定制纸箱</div>
+            </div>
+            <div class="step">
+                <div class="s1"></div>
+                <div class="s2">2</div>
+                <div class="s1"></div>
+                <div class="s3">2.选择数量</div>
+            </div>
+            <div class="step">
+                <div class="s1"></div>
+                <div class="s2">3</div>
+                <div class="s1"></div>
+                <div class="s3">3.上传附件</div>
+            </div>
+            <div class="step">
+                <div class="s1"></div>
+                <div class="s2">4</div>
+                <div class="s1"></div>
+                <div class="s3">4.确认下单</div>
+            </div>
+        </div>
+        <div class="div1"><span class="bar"></span>&nbsp;请根据以下选项定制您的纸箱</div>
+        <form>
+            <div class="panel panel-default">
+                <div class="panel-heading"><span class="sprites icon1"></span> 选择箱形
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">查看详情</button>
+                        <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">
+                           <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><b>对口箱</b></li>
+                            <li>一些文字一些文字一些文字一些文字</li>
+                            <li class="divider"></li>
+                            <li><b>飞机盒</b></li>
+                            <li>一些文字一些文字一些文字一些文字</li>
+                            <li class="divider"></li>
+                            <li><b>天地盖</b></li>
+                            <li>一些文字一些文字一些文字一些文字</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <input type="radio" id="duikou" name="xiangxing">
+                    <label for="duikou">对口箱</label>
+                    <input type="radio" id="feiji" name="xiangxing">
+                    <label for="feiji">飞机盒</label>
+                    <input type="radio" id="tiandi" name="xiangxing">
+                    <label for="tiandi">天地盖</label>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading"><span class="sprites icon2"></span> 确定尺寸
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">查看详情</button>
+                        <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">
+                           <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><b>外径</b></li>
+                            <li>一些文字一些文字一些文字一些文字</li>
+                            <li class="divider"></li>
+                            <li><b>内径</b></li>
+                            <li>一些文字一些文字一些文字一些文字</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="inline-block">
+                        <input type="radio" id="waijing" name="chicun">
+                        <label for="waijing">外径</label>
+                        <div class="input-text">长
+                            <input type="text" id="waichang" maxlength="5" name="chicun"> mm</div>
+                        <div class="input-text">宽
+                            <input type="text" id="waikuan" maxlength="5" name="chicun"> mm</div>
+                        <div class="input-text">高
+                            <input type="text" id="waigao" maxlength="5" name="chicun"> mm</div>
+                    </div>
+                    <div class="inline-block">
+                        <input type="radio" id="neijing" name="chicun">
+                        <label for="neijing">内径</label>
+                        <div class="input-text">长
+                            <input type="text" id="neichang" maxlength="5" name="chicun"> mm</div>
+                        <div class="input-text">宽
+                            <input type="text" id="neikuan" maxlength="5" name="chicun"> mm</div>
+                        <div class="input-text">高
+                            <input type="text" id="neigao" maxlength="5" name="chicun"> mm</div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading"><span class="sprites icon3"></span> 选择材质
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">查看详情</button>
+                        <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">
+                           <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><b>三层A瓦优质</b></li>
+                            <li>一些文字一些文字一些文字一些文字</li>
+                            <li class="divider"></li>
+                            <li><b>三层A瓦优质</b></li>
+                            <li>一些文字一些文字一些文字一些文字</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <input type="radio" id="3a" name="caizhi">
+                    <label for="3a">三层A瓦优质</label>
+                    <input type="radio" id="3b" name="caizhi">
+                    <label for="3b">三层A瓦优质</label>
+                    <input type="radio" id="3c" name="caizhi">
+                    <label for="3c">三层A瓦优质</label>
+                    <input type="radio" id="3d" name="caizhi">
+                    <label for="3d">三层A瓦优质</label>
+                    <input type="radio" id="3e" name="caizhi">
+                    <label for="3e">三层A瓦优质</label>
+                </div>
+            </div>
+            <input type="submit" name="" value="下一步" class="btn btn-danger">
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="div2">
+                <div class="div5">51包装网 — 纸箱包装首选服务平台</div>
+                <div class="div3"><a href="">关于我们</a>&emsp;&emsp;&emsp;<a href="">配送流程</a>&emsp;&emsp;&emsp;<a href="">联系我们</a><br/><a href="">下单指南</a>&emsp;&emsp;&emsp;<a href="">媒体介绍</a></div>
+                <div class="qrcode">
+                    <div class="div4">Tel：010-12345678<br/>企业QQ：12345678<br/>微信号：12345678</div><img src="images/img20.jpg" class="img1"></div>
+            </div>
+        </div>
+    </footer>
+    <footer class="copyright">Copyright © 2018 高富帅信息技术有限公司 All Rights Reserved | 京ICP备15000000号</footer>
+</body>
+
+</html>

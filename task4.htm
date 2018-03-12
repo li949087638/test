@@ -4,29 +4,39 @@
 <head>
     <title>任务4</title>
     <meta charset="utf-8">
-    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="css/task4.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <a href="#" class="left">注册</a>
-        <span><b>登录</b></span>
-        <a href="index.htm" class="right">关闭</a>
-    </div>
-    <div class="input" style="margin:0.5rem 0;">
-        <img src="images/img5.png" width="37.5" height="25.5">
-        <input type="text" name="username" placeholder="请输入手机号" maxlength="11">
-    </div>
-    <div class="input" style="margin:0.5rem 0 2rem;">
-        <img src="images/img6.png" width="37.5" height="25.5">
-        <input type="password" name="password" placeholder="请输入密码">
-    </div>
-    <div class="container" style="line-height:3.5rem;">
-        <span><b>登 录</b></span>
-    </div>
-    <a href="#" class="forget">忘记密码？</a>
+    <header>
+        <a href="index.htm">&lt; 返回</a>
+    </header>
+    <form>
+        <div class="div1">
+            <div class="input-group">
+                <span class="input-group-addon"><img src="images/img5.png" class="img1"></span>
+                <input type="text" name="username" class="form-control" placeholder="请输入手机号" maxlength="11" autofocus>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><img src="images/img6.png" class="img1"></span>
+                <input type="password" name="password" class="form-control" placeholder="请输入密码">
+            </div>
+        </div>
+        <input type="submit" name="" value="登录" class="login">
+    </form>
+    <a href="" class="pull-left">立即注册</a>
+    <a href="" class="pull-right">忘记密码？</a>
+    <footer>
+        <i></i> 第三方登录
+        <i></i>
+        <div>
+            <a href=""><i class="sprites qq"></i><br/>QQ登录</a>
+            <a href=""><i class="sprites wx"></i><br/>微信登录</a>
+            <a href=""><i class="sprites wb"></i><br/>微博登录</a>
+        </div>
+    </footer>
 </body>
 
 </html>
