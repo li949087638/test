@@ -8,8 +8,9 @@
     <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/task9.css" rel="stylesheet">
-    <script src="jquery/jquery-3.3.1.min.js"></script>
-    <script src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- <script src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script> -->
+    <script src="js/task9.js"></script>
 </head>
 
 <body>
@@ -85,12 +86,9 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                    <input type="radio" id="duikou" name="xiangxing">
-                    <label for="duikou">对口箱</label>
-                    <input type="radio" id="feiji" name="xiangxing">
-                    <label for="feiji">飞机盒</label>
-                    <input type="radio" id="tiandi" name="xiangxing">
-                    <label for="tiandi">天地盖</label>
+                    <label><input type="radio" id="hide-duikou" name="xiangxing"><b></b>对口箱</label>
+                    <label><input type="radio" id="hide-feiji" name="xiangxing"><b></b>飞机盒</label>
+                    <label><input type="radio" id="hide-tiandi" name="xiangxing"><b></b>天地盖</label>
                 </div>
             </div>
             <div class="panel panel-default">
@@ -111,24 +109,22 @@
                 </div>
                 <div class="panel-body">
                     <div class="inline-block">
-                        <input type="radio" id="waijing" name="chicun">
-                        <label for="waijing">外径</label>
+                        <label><input type="radio" id="hide-waijing" name="chicun"><b></b>外径</label>
                         <div class="input-text">长
-                            <input type="text" id="waichang" maxlength="5" name="chicun"> mm</div>
+                            <input type="text" id="waichang" maxlength="5" name="chicun" disabled> mm</div>
                         <div class="input-text">宽
-                            <input type="text" id="waikuan" maxlength="5" name="chicun"> mm</div>
+                            <input type="text" id="waikuan" maxlength="5" name="chicun" disabled> mm</div>
                         <div class="input-text">高
-                            <input type="text" id="waigao" maxlength="5" name="chicun"> mm</div>
+                            <input type="text" id="waigao" maxlength="5" name="chicun" disabled> mm</div>
                     </div>
                     <div class="inline-block">
-                        <input type="radio" id="neijing" name="chicun">
-                        <label for="neijing">内径</label>
+                        <label><input type="radio" id="hide-neijing" name="chicun"><b></b>内径</label>
                         <div class="input-text">长
-                            <input type="text" id="neichang" maxlength="5" name="chicun"> mm</div>
+                            <input type="text" id="neichang" maxlength="5" name="chicun" disabled> mm</div>
                         <div class="input-text">宽
-                            <input type="text" id="neikuan" maxlength="5" name="chicun"> mm</div>
+                            <input type="text" id="neikuan" maxlength="5" name="chicun" disabled> mm</div>
                         <div class="input-text">高
-                            <input type="text" id="neigao" maxlength="5" name="chicun"> mm</div>
+                            <input type="text" id="neigao" maxlength="5" name="chicun" disabled> mm</div>
                     </div>
                 </div>
             </div>
@@ -149,16 +145,11 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                    <input type="radio" id="3a" name="caizhi">
-                    <label for="3a">三层A瓦优质</label>
-                    <input type="radio" id="3b" name="caizhi">
-                    <label for="3b">三层A瓦优质</label>
-                    <input type="radio" id="3c" name="caizhi">
-                    <label for="3c">三层A瓦优质</label>
-                    <input type="radio" id="3d" name="caizhi">
-                    <label for="3d">三层A瓦优质</label>
-                    <input type="radio" id="3e" name="caizhi">
-                    <label for="3e">三层A瓦优质</label>
+                    <label><input type="radio" id="hide-3a" name="caizhi"><b></b>三层A瓦优质</label>
+                    <label><input type="radio" id="hide-3b" name="caizhi"><b></b>三层A瓦优质</label>
+                    <label><input type="radio" id="hide-3c" name="caizhi"><b></b>三层A瓦优质</label>
+                    <label><input type="radio" id="hide-3d" name="caizhi"><b></b>三层A瓦优质</label>
+                    <label><input type="radio" id="hide-3e" name="caizhi"><b></b>三层A瓦优质</label>
                 </div>
             </div>
             <input type="submit" name="" value="下一步" class="btn btn-danger">

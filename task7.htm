@@ -1,50 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>任务7</title>
     <meta charset="utf-8">
-    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="jquery/jquery-3.3.1.min.js"></script>
-    <script src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
-   <link href="css/task7.css" rel="stylesheet">
+    <link href="css/task7.css" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/task7.js"></script>
 </head>
 
 <body>
-    <header>
-        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
-            <div class="icon"></div>
-            <div class="icon" style="margin: 0.5rem 0"></div>
-            <div class="icon"></div>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-            <li><a href="#">功能1</a></li>
-            <li><a href="#">功能2</a></li>
-            <li><a href="#">功能3</a></li>
-            <li class="divider"></li>
-            <li><a href="index.htm">主页</a></li>
-        </ul>
-    </header>
-    <main>
-        <div class="last">
-            <a href="task7-1.htm">上次游戏：捉鬼猜词版<span class="arrow">&gt;</span></a>
-        </div>
-        <div class="div1">
-            <div class="div1-1">捉鬼游戏</div>
-            <div class="div1-2"><a href="#">简化版</a>
+    <input type="checkbox" id="sidenav-toggle">
+    <div class="sidenav">
+        <div class="sidenav-heading">菜单</div>
+        <a href="#">
+            <img src="images/24-1.png" class="icon-1">
+            <span class="sidenav-text">公告</span>
+            <img src="images/arrow-2.png" class="arrow-2"></a>
+        <a href="#">
+            <img src="images/24-2.png" class="icon-1">
+            <span class="sidenav-text">设置</span>
+            <img src="images/arrow-2.png" class="arrow-2"></a>
+        <a href="#">
+            <img src="images/24-3.png" class="icon-1">
+            <span class="sidenav-text">帮助</span>
+            <img src="images/arrow-2.png" class="arrow-2"></a>
+        <a href="#">
+            <img src="images/24-4.png" class="icon-1">
+            <span class="sidenav-text">关于</span>
+            <img src="images/arrow-2.png" class="arrow-2"></a>
+        <a href="index.htm">
+            <img src="images/24-5.png" class="icon-1">
+            <span class="sidenav-text">返回主页</span>
+            <img src="images/arrow-2.png" class="arrow-2"></a>
+    </div>
+    <label for="sidenav-toggle" class="toggle-2"></label>
+    <div class="header">
+        <label for="sidenav-toggle" class="toggle-1">
+            <div class="line-white"></div>
+            <div class="line-white"></div>
+            <div class="line-white"></div>
+        </label>
+    </div>
+    <div class="main tc">
+        <a href="task7-1.htm" class="panel lastgame">上次游戏：捉鬼猜词版<img src="images/arrow-1.png" class="arrow-1"></a>
+        <div class="panel version-choice">
+            <div class="panel-title">捉鬼游戏</div>
+            <div class="triangle-l"></div>
+            <div class="triangle-r"></div>
+            <div class="version active">
+                <a href="task7-1.htm">简化版</a>
                 <br/>有112233个用户正在玩此款游戏
                 <br/><a href="task7-1.htm">猜词版</a>
                 <br/>有112233个用户正在玩此款游戏
-                <br/><a href="#">白痴版</a>
+                <br/><a href="task7-1.htm">白痴版</a>
                 <br/>有112233个用户正在玩此款游戏
-                <div class="triangle"></div>
-                <div class="footer"><span></span><span></span><span></span><span></span>
-                </div>
             </div>
+            <div class="version">
+                <a href="task7-1.htm">2.0版</a>
+                <br/>有223344个用户正在玩此款游戏
+                <br/><a href="task7-1.htm">3.0版</a>
+                <br/>有223344个用户正在玩此款游戏
+                <br/><a href="task7-1.htm">4.0版</a>
+                <br/>有223344个用户正在玩此款游戏
+            </div>
+            <div class="version">
+                <a href="">暂无</a>
+                <br/>有334455个用户正在玩此款游戏
+                <br/><a href="">暂无</a>
+                <br/>有334455个用户正在玩此款游戏
+                <br/><a href="">暂无</a>
+                <br/>有334455个用户正在玩此款游戏
+            </div>
+            <span class="circle-1 bg-orange">1</span><span class="circle-1">2</span><span class="circle-1">3</span>
         </div>
-    </main>
+    </div>
 </body>
 
 </html>

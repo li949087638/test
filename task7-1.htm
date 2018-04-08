@@ -1,157 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 
 <head>
     <title>任务7-1</title>
     <meta charset="utf-8">
-    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="bootstrap-3.3.7/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/task7-1.css">
-    <script src="jquery/jquery-3.3.1.min.js"></script>
-    <script src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <link href="css/task7.css" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 
-<body ontouchstart>
-    <header>
-        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
-            <div class="icon"></div>
-            <div class="icon" style="margin: 0.5rem 0"></div>
-            <div class="icon"></div>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-            <li><a href="#">功能1</a></li>
-            <li><a href="#">功能2</a></li>
-            <li><a href="#">功能3</a></li>
-            <li class="divider"></li>
-            <li><a href="index.htm">主页</a></li>
-        </ul>
-        <span class="center">投票</span><a href="task7.htm" class="closed">&times;</a>
-    </header>
-    <script>
-    function play() {
-        var audio = document.getElementById('audio1');
-        if (audio.paused) {
-            audio.play();
-        } else {
-            audio.pause();
-        }
-    }
-    </script>
-    <main>
-        <div class="div1">发言讨论结束，大家请投票<span class="sprites icon1" onclick="play()"><audio id="audio1" src="audio/枷锁-高颖.mp3"></audio></span></div>
-        <div class="div2">
-            <div class="triangle"></div>点击得票数最多人的头像</div>
-        <div class="div3">
-            <div class="div3-1">
-                <div class="div3-2">水民</div>
-                <div class="div3-3">1号</div>
+<body>
+    <!-- header -->
+    <div class="header tc">
+        <span class="back c-f flex-center"><img src="images/arrow-3.png" class="arrow-3">&nbsp;返回</span>
+        <div id="head-title">参数设置</div>
+    </div>
+    <!-- 参数设置页面 -->
+    <div id="setting">
+        <div class="main tc">
+            <div class="panel">
+                <div class="panel-title">玩家配比</div>
+                <div class="panel-item"><b class="circle-2 bg-blue"></b>幽灵 <span id="youling">3</span> 人</div>
+                <div class="panel-item"><b class="circle-2 bg-orange"></b>平民 <span id="pingmin">6</span> 人</div>
             </div>
-            <div class="menu"><span class="sprites icon4"></span><span class="sprites icon2"></span><span class="sprites icon3"></span><span class="sprites icon5"></span></div>
-        </div>
-        <div class="div3">
-            <div class="div3-1">
-                <div class="div3-2">水民</div>
-                <div class="div3-3">1号</div>
+            <div class="panel tl">
+                输入玩家数量：
+                <input type="text" class="gamer" name="" value="9"> （4~18人）<br/><br/>
+                <input type="range" class="range" name="" min="4" max="18"><br/><br/><br/><br/> 输入幽灵词汇：
+                <input type="text" class="word" name="yl-word" maxlength="10" placeholder="限10个字以内"><br/><br/> 输入平民词汇：
+                <input type="text" class="word" name="pm-word" maxlength="10" placeholder="限10个字以内">
             </div>
-            <div class="menu"><span class="sprites icon4"></span><span class="sprites icon2"></span><span class="sprites icon3"></span><span class="sprites icon5"></span></div>
-        </div>
-        <div class="div3">
-            <div class="div3-1">
-                <div class="div3-2">水民</div>
-                <div class="div3-3">1号</div>
+            <div class="footer tc">
+                <button class="btn" name="fapai">去发牌</button>
             </div>
-            <div class="menu"><span class="sprites icon4"></span><span class="sprites icon2"></span><span class="sprites icon3"></span><span class="sprites icon5"></span></div>
         </div>
-        <div class="div3">
-            <div class="div3-1">
-                <div class="div3-2">水民</div>
-                <div class="div3-3">1号</div>
+    </div>
+    <!-- 发牌页面 -->
+    <div id="deal" class="deal bg-blue">
+        <div class="deal-panel">
+            <div class="deal-num">1</div>
+            <!-- 反面 -->
+            <div class="deal-reverse tc">
+                <img src="images/24-6.png" width="220px" height="220px">
             </div>
-            <div class="menu"><span class="sprites icon4"></span><span class="sprites icon2"></span><span class="sprites icon3"></span><span class="sprites icon5"></span></div>
-        </div>
-        <div class="div3">
-            <div class="div3-1">
-                <div class="div3-2">水民</div>
-                <div class="div3-3">1号</div>
+            <!-- 正面 -->
+            <div class="deal-front tc">
+                <img src="images/24-7.png" width="160px" height="160px">
+                <div class="c-blue fs-25 mg-15">角色：<span id="juese"></span></div>
+                <div class="c-red fs-25 mg-15">词汇：<span id="cihui"></span></div>
+                <div class="deal-tip tl">想办法猜到别人的词，同时还要注意不暴露自己哦！</div>
             </div>
-            <div class="menu"><span class="sprites icon4"></span><span class="sprites icon2"></span><span class="sprites icon3"></span><span class="sprites icon5"></span></div>
         </div>
-        <div class="div3">
-            <div class="div3-1">
-                <div class="div3-2">水民</div>
-                <div class="div3-3">1号</div>
+        <!-- 法官日志，身份列表 -->
+        <div class="deal-list">
+            <div class="list-item">
+                <div class="item-name flex-center">平民</div>
+                <div class="item-num flex-center">1号</div>
+                <span class="sprites icon4"></span>
             </div>
-            <div class="menu"><span class="sprites icon4"></span><span class="sprites icon2"></span><span class="sprites icon3"></span><span class="sprites icon5"></span></div>
         </div>
-        <div class="div3">
-            <div class="div3-1">
-                <div class="div3-2">水民</div>
-                <div class="div3-3">1号</div>
+        <div class="footer tc">
+            <button class="btn" name="deal-next">查看1号身份</button>
+        </div>
+    </div>
+    <!-- 法官台本 -->
+    <div id="taiben" class="main hide">
+        <div class="hide">
+            <!-- 隐藏模板，需要时用脚本clone -->
+            <div class="tb-day">
+                <div class="day-title panel tc c-blue"><span>第1天</span><img src="images/arrow-4.png" class="arrow-4">
+                </div>
+                <div class="day-content tc">
+                    <img src="images/24-8.png" class="day-img">
+                    <div class="day-item bg-blue"><b></b>玩家依次发言</div>
+                    <div class="day-item bg-blue"><b></b>投票</div>
+                </div>
             </div>
-            <div class="menu"><span class="sprites icon4"></span><span class="sprites icon2"></span><span class="sprites icon3"></span><span class="sprites icon5"></span></div>
         </div>
-        <div class="div3">
-            <div class="div3-1">
-                <div class="div3-2">水民</div>
-                <div class="div3-3">1号</div>
+        <div class="footer tc">
+            <button class="btn" name="tb-log">查看法官日志</button>
+        </div>
+    </div>
+    <!-- 投票页面 -->
+    <div id="poll" class="poll bg-blue">
+        <div class="poll-h1 c-0">发言讨论结束，大家请投票</div>
+        <div class="poll-h2">
+            <div class="triangle-t"></div>点击得票数最多人的头像</div>
+        <div class="footer tc">
+            <button class="btn" name="poll-ok">确定</button>
+        </div>
+    </div>
+    <!-- end -->
+    <div id="end" class="hide">
+        <div class="win tc bg-blue">
+            <img src="images/24-9.png" class="win-img">
+            <span class="win-text"></span>
+            <div class="tl">
+                <br/>剩余玩家：<br/> 
+                幽灵<span id="yl-num"></span>人&emsp;&emsp;平民<span id="pm-num"></span>人<br/><br/> 幽灵词汇：
+                <span id="yl-word"></span><br/> 平民词汇：
+                <span id="pm-word"></span>
             </div>
-            <div class="menu"><span class="sprites icon4"></span><span class="sprites icon2"></span><span class="sprites icon3"></span><span class="sprites icon5"></span></div>
         </div>
-        <div class="div3">
-            <div class="div3-1">
-                <div class="div3-2">水民</div>
-                <div class="div3-3">1号</div>
+        <div class="hide">
+            <!-- 隐藏log模板 -->
+            <div class="end-log">
+                <div class="log-title">第1天</div>
+                <div class="log-text">8号被全民投票投死，8号是杀手。</div>
             </div>
-            <div class="menu"><span class="sprites icon4"></span><span class="sprites icon2"></span><span class="sprites icon3"></span><span class="sprites icon5"></span></div>
         </div>
-        <div class="div3">
-            <div class="div3-1">
-                <div class="div3-2">水民</div>
-                <div class="div3-3">1号</div>
-            </div>
-            <div class="menu"><span class="sprites icon4"></span><span class="sprites icon2"></span><span class="sprites icon3"></span><span class="sprites icon5"></span></div>
+        <div class="footer tc">
+            <a class="btn" href="">再来一局</a>
         </div>
-        <div class="div3">
-            <div class="div3-1">
-                <div class="div3-2">水民</div>
-                <div class="div3-3">1号</div>
-            </div>
-            <div class="menu"><span class="sprites icon4"></span><span class="sprites icon2"></span><span class="sprites icon3"></span><span class="sprites icon5"></span></div>
-        </div>
-        <div class="div3">
-            <div class="div3-1">
-                <div class="div3-2">水民</div>
-                <div class="div3-3">1号</div>
-            </div>
-            <div class="menu"><span class="sprites icon4"></span><span class="sprites icon2"></span><span class="sprites icon3"></span><span class="sprites icon5"></span></div>
-        </div>
-        <div class="div3">
-            <div class="div3-1">
-                <div class="div3-2">水民</div>
-                <div class="div3-3">1号</div>
-            </div>
-            <div class="menu"><span class="sprites icon4"></span><span class="sprites icon2"></span><span class="sprites icon3"></span><span class="sprites icon5"></span></div>
-        </div>
-        <div class="div3">
-            <div class="div3-1">
-                <div class="div3-2">水民</div>
-                <div class="div3-3">1号</div>
-            </div>
-            <div class="menu"><span class="sprites icon4"></span><span class="sprites icon2"></span><span class="sprites icon3"></span><span class="sprites icon5"></span></div>
-        </div>
-        <div class="div3">
-            <div class="div3-1">
-                <div class="div3-2">水民</div>
-                <div class="div3-3">1号</div>
-            </div>
-            <div class="menu"><span class="sprites icon4"></span><span class="sprites icon2"></span><span class="sprites icon3"></span><span class="sprites icon5"></span></div>
-        </div>
-        <div class="clearfix"></div>
-    </main>
-    <footer>
-        <button type="button" class="btn">投死</button>
-    </footer>
+    </div>
+    <script src="js/task7.js"></script>
 </body>
 
 </html>

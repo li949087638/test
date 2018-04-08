@@ -1,63 +1,155 @@
-﻿body {
+﻿* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
     margin: 0;
-    padding: 0;
     background: #eff0f4;
-    color: #68cdd5;
-    line-height: 3rem;
 }
 
-.container {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background: #68cdd5;
-    color: #ffffff;
-}
-
-.left {
-    display: inline-block;
-    padding: 0 1rem;
+a {
+    color: #888;
     text-decoration: none;
-    color: #fff;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.right {
-    display: inline-block;
-    padding: 0 1rem;
-    text-decoration: none;
-    color: #fff;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-.input {
-    padding: 0;
-    font-size: 0;
-    background: #ffffff;
-}
-
-a.forget {
-    color: #68cdd5;
-    text-decoration: none;
-    float: right;
     margin: 0 1rem;
 }
 
-img {
-    padding: 0 1.5rem;
+a:hover,
+a:focus {
+    color: #23527c;
+}
+
+header {
+    width: 100%;
+    background: #1ca9f4;
+    color: #fff;
+    line-height: 3rem;
+}
+
+header a {
+    color: #fff;
+}
+
+.div1 {
+    background: #fff;
+}
+
+.img1 {
+    width: auto;
+    height: 1.5rem;
     vertical-align: middle;
 }
 
-input {
+.input-group {
+    display: table;
+    margin: 1rem 0;
+}
+
+.input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    display: table-cell;
+    width: 100%;
+    padding: 1rem;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid transparent;
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.input-group .form-control:focus {
+    z-index: 3;
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+.input-group-addon {
+    width: 1%;
+    padding-left: 1rem;
     vertical-align: middle;
+    display: table-cell;
+}
+
+
+
+input.login {
+    -webkit-appearance: button;
+    cursor: pointer;
+    width: 96%;
+    margin: 1rem 2%;
+    padding: 0.5rem 0;
+    background-color: #1ca9f4;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 6px;
     border: none;
 }
 
-input:focus {
-    outline: 0;
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+footer {
+    margin-top: 10rem;
+    text-align: center;
+    color: #888;
+}
+
+footer>i {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    height: 0;
+    width: 30%;
+    border: 1px solid #bbb;
+}
+
+footer>div {
+    margin: 2rem 0;
+}
+
+footer a {
+    display: inline-block;
+}
+
+.sprites {
+    display: inline-block;
+    background-image: url(../images/img23.png);
+    background-repeat: no-repeat;
+    margin-bottom: 0.5rem;
+}
+
+.sprites.qq {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 8.4rem 5.2rem;
+    background-position: 0 0;
+}
+
+.sprites.wx {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 8.4rem 5.2rem;
+    background-position: -2.9rem 0;
+}
+
+.sprites.wb {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 8.4rem 5.2rem;
+    background-position: -5.9rem 0;
+}
+
+footer a:hover .sprites,
+footer a:focus .sprites {
+    background-position-y: -2.7rem;
 }

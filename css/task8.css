@@ -1,6 +1,9 @@
+html {
+    font-size: 12px;
+}
+
 header {
     line-height: 2.5rem;
-    height: 2.5rem;
 }
 
 .tel {
@@ -10,8 +13,10 @@ header {
 
 header .right {
     float: right;
-    padding-top: 0.43rem;
-    line-height: initial;
+}
+
+body {
+    background-color: #fafafa;
 }
 
 .sprites {
@@ -21,25 +26,28 @@ header .right {
 }
 
 .icon1 {
-    width: 1.6667rem;
+    width: 1.667rem;
     height: 1.6rem;
-    background-size: 37.7333rem 16.2rem;
-    background-position: -31.1rem -7.87rem;
+    background-size: 37.733rem 16.2rem;
+    background-position: -31.067rem -7.867rem;
+    vertical-align: middle;
 }
 
 .icon2 {
-    width: 1.6667rem;
+    width: 1.667rem;
     height: 1.6rem;
-    background-size: 37.7333rem 16.2rem;
-    background-position: -28.8rem -7.87rem;
+    background-size: 37.733rem 16.2rem;
+    background-position: -28.8rem -7.867rem;
+    vertical-align: middle;
     margin-left: 1rem;
 }
 
 .icon3 {
-    width: 1.6667rem;
+    width: 1.667rem;
     height: 1.6rem;
-    background-size: 37.7333rem 16.2rem;
-    background-position: -33.4667rem -7.87rem;
+    background-size: 37.733rem 16.2rem;
+    background-position: -33.333rem -7.867rem;
+    vertical-align: middle;
     margin-left: 1rem;
 }
 
@@ -70,8 +78,8 @@ header .right {
 .icon7 {
     width: 1.4rem;
     height: 1.4rem;
-    background-size: 60.9583rem 26.1692rem;
-    background-position: -50.6154rem -16.3692rem;
+    background-size: 60.954rem 26.169rem;
+    background-position: -50.831rem -16.369rem;
     vertical-align: middle;
 }
 
@@ -148,25 +156,21 @@ header .right {
 }
 
 .icon18 {
-    width: 8rem;
-    height: 8rem;
-    background-size: 49.217rem 21.13rem;
-    background-position: -41.217rem 0rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-size: 42.45rem 18.225rem;
+    background-position: -37.5rem -11.4rem;
+    vertical-align: middle;
 }
-.icon19{
+
+.icon19 {
     width: 6.283rem;
     height: 3rem;
     background-size: 32.038rem 13.755rem;
     background-position: -24.17rem -10.245rem;
     margin-top: 2rem;
 }
-.icon20{
-    width: 1.493rem;
-    height: 1.4rem;
-    background-size: 52.827rem 22.68rem;
-    background-position: -46.013rem -14.187rem;
-    vertical-align: middle;
-}
+
 .bg-green {
     background-color: #26a26f;
     color: #fff;
@@ -201,7 +205,6 @@ header .right {
 
 .nav>li>a:hover,
 .nav>li>a:focus {
-    text-decoration: none;
     border-bottom: 4px solid #fff;
 }
 
@@ -231,7 +234,7 @@ header .right {
         background-color: #007000;
         border-bottom: none;
     }
-    .icon19{
+    .icon19 {
         margin-top: 0.7rem;
         margin-left: 15px;
     }
@@ -245,7 +248,7 @@ header .right {
 .carousel-control {
     width: 1em;
     height: 1em;
-    font-size: 8rem;
+    font-size: 80px;
 }
 
 .left-1 {
@@ -273,15 +276,15 @@ header .right {
 }
 
 .span1 {
-    font-size: 2.6vw;
+    font-size: 2vw;
 }
 
 .span2 {
-    font-size: 5vw;
+    font-size: 4vw;
 }
 
 .span3 {
-    font-size: 3.6vw;
+    font-size: 3vw;
 }
 
 .carousel-indicators {
@@ -330,7 +333,7 @@ header .right {
 .div3 {
     margin: 6rem 0 2rem;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -409,7 +412,6 @@ header .right {
 }
 
 .div6>a {
-    text-decoration: none;
     color: #888;
 }
 
@@ -434,8 +436,8 @@ header .right {
 }
 
 .p1 {
-    margin: 1rem auto;
-    font-size: 2rem;
+    margin: 10px auto;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -452,7 +454,7 @@ header .right {
 
 .p4 {
     margin: 1.5rem 0;
-    font-size: 2rem;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -465,7 +467,7 @@ header .right {
     box-shadow: 0 1px 5px rgba(0, 0, 0, .25);
     text-align: center;
     color: #26a26f;
-    font-size: 2rem;
+    font-size: 20px;
     font-weight: 700;
     vertical-align: middle;
 }
@@ -494,25 +496,25 @@ header .right {
     vertical-align: top;
     width: 30rem;
     margin: 2rem 0;
-    font-size: 1.8rem;
+    font-size: 18px;
 }
 
 .span5 a {
-    text-decoration: none;
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 14px;
 }
 
 .qrcode {
     float: right;
     text-align: center;
-    margin-top: 2.5rem;
+    margin: 2rem 0;
 }
-@media(max-width: 767px){
-    .qrcode{
+
+@media(max-width: 767px) {
+    .qrcode {
         float: none;
     }
-    .span5{
+    .span5 {
         width: 100%;
         text-align: center;
     }
@@ -522,11 +524,11 @@ header .right {
     text-align: center;
     border-top: 1px solid #26c184;
     padding: 0.5rem 0;
-    font-size: 1.2rem;
+    font-size: 12px;
 }
 
 .div8 {
-    margin: 1rem 0 2rem;
+    margin: 1.5rem 0;
 }
 
 .div11 a,
@@ -535,35 +537,21 @@ header .right {
     color: #000;
 }
 
-.div10 {
-    margin-bottom: 5rem;
+.div9 {
+    border: 1px solid #dadada;
+    border-radius: 6px;
+    background-color: #fff;
+    margin-bottom: 2rem;
 }
 
-.div9 {
-    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .15);
-    box-shadow: 0 0 20px rgba(0, 0, 0, .15);
-}
-.col-xs-9.div9{
-    margin-left: 5%;
-}
+@media (max-width: 767px) {}
+
 
 .div9-1 {
     border-bottom: 1px solid #ccc;
     padding: 2rem 0;
+    margin-bottom: 0rem;
     text-align: center;
-}
-
-.circle {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    border: 2px solid #ff650e;
-    border-radius: 50%;
-    margin-right: 0.5rem;
-}
-
-.div9-2:hover .circle {
-    background-color: #f9a372;
 }
 
 .div9-2 {
@@ -572,124 +560,203 @@ header .right {
 }
 
 .div9-2 a {
+    
     text-decoration: none;
     color: #26a26f;
-    font-weight: 700;
+}
+.div9-2 b {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border: 1px solid #ff650e;
+    border-radius: 50%;
+    margin-right: 0.5rem;
 }
 
+.div9-2:hover b{
+    background-color: #f9a372;
+}
+
+/*本想利用radio绑定tab标签选中状态，可惜label里面的链接无法触发radio，等有时间再研究
+input[id^="hide-radio"] {
+    display: none;
+}
+
+input[id^="hide-radio"]+label {
+    display: inline-block;
+    font-weight: normal;
+}
+
+label b {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border: 1px solid #ff650e;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+input[id^="hide-radio"]:checked+label b {
+    background-color: #f9a372;
+}*/
+
 .div9-3 {
-    display: -webkit-flex;
-    display: flex;
     border-bottom: 1px solid #ccc;
     padding: 2rem;
 }
-.div9-3 .sprites{
-    margin: auto 2rem auto 0;
+
+.div9-3 .sprites {
+    float: left;
+    margin: 2rem 1rem 1rem 0;
 }
-.div9 p{
+
+.div9 p {
     text-indent: 2em;
     margin: 2rem;
 }
-.div11{
-    color: #888;
-    border:1px solid;
+
+.div11 {
+    border: 1px solid;
     border-color: #ccc transparent #eee transparent;
+    padding: 0.5rem 0;
 }
-.div11 a{
+
+.div11 a {
     display: inline-block;
-    margin:1rem;
+    margin: 0.5rem 1rem;
 }
-.div12{
-    font-size: 1.8rem;
+
+.div12 {
+    font-size: 18px;
     line-height: 6rem;
     font-weight: 700;
-    border-bottom:1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
-a.active{
+
+a.active {
     background-color: #26a26f;
     color: #fff;
     padding: 0.5rem;
 }
-.div13{
+
+.div13 {
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .25);
-    box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+    border: 1px solid #dadada;
+    border-radius: 6px;
+    background-color: #fff;
     width: 29rem;
     margin: 3rem 2rem 1rem 0;
-    font-size: 1.2rem;
 }
-.div13>div{
+
+@media (max-width: 767px) {
+    .div13 {
+        width: 100%;
+        margin: 3rem 0 1rem 0;
+    }
+}
+
+.div13>div {
     padding: 1rem;
 }
-.div13>div:first-child{
-    margin-bottom: 1rem;
-}
-.div13>div:not(:first-child){
+
+.div13>div:not(:first-child) {
     float: left;
     border-top: 1px solid #eee;
     color: #888;
 }
-.div13-1{
+
+.img1 {
+    width: 42%;
+    height: auto;
+}
+
+.img2 {
+    width: auto;
+    height: auto;
+}
+
+.img3 {
+    width: 100%;
+    height: auto;
+}
+
+.img4 {
+    width: 8rem;
+    height: 8rem;
+}
+
+.div13-1 {
     display: inline-block;
     vertical-align: middle;
-    width: 15.1rem;
-    padding-left:1rem;
+    width: 56%;
+    padding-left: 1rem;
 }
-.span6{
-    font-size: 1.6rem;
+
+.div13-1>p {
     font-weight: 700;
-    line-height: 3;
 }
-.div13-2{
+
+.div13-2 {
     border-right: 1px solid #eee;
-    width: 14.5rem;
+    width: 50%;
 }
-.div13-3{
-    width: 14.5rem;
+
+.div13-3 {
+    width: 50%;
 }
-.span7{
+
+.span7 {
     color: #f00;
     font-weight: 700;
 }
-.span8{
+
+.span8 {
     color: #000;
 }
-.div13-4{
-    width: 12rem;
-    padding: 4.5rem 1rem !important;
+
+.div13-4 {
+    width: 40%;
+    line-height: 8.5rem;
     border-right: 1px solid #eee;
     text-align: center;
 }
-.div13-5{
-    width: 17rem;
+
+.div13-5 {
+    width: 60%;
     color: #000;
 }
-.div13-6{
+
+.div13-6 {
     width: 100%;
-    font-size: 1.4rem;
     font-weight: 700;
     color: #000 !important;
 }
-.div13-7{
+
+.div13-7 {
     width: 100%;
 }
-.div13-8{
+
+.div13-8 {
     display: none;
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     padding: 5rem 3rem 0 !important;
-    font-size: 1.4rem;
     color: #fff !important;
-    background-color: rgba(0,0,0,.75);
+    background-color: rgba(0, 0, 0, .75);
 }
-.div13:hover .div13-8{
+
+.div13:hover .div13-8 {
     display: block;
 }
-.div13-8 p{
+
+.div13-8 p {
     text-align: center;
     margin-bottom: 2rem;
+}
+.div14{
+    margin-top: 10rem;
 }

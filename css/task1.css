@@ -1,18 +1,35 @@
 ﻿body {
     margin: 0;
-    padding: 0;
 }
 
-.container {
-    width: 97vw;
-    margin: 1.5vw;
-}
-
-.float {
+.cell {
     width: 30%;
     padding: 15% 0;
-    background: orange;
+    background: #ffa500;
     float: left;
-    margin: 1.5%;
+    margin: 1.666%;
     border-radius: 10px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.btn {
+    display: block;
+    width: 50%;
+    padding: 10px 0;
+    margin: 20px auto;
+    background-color: #fff;
+    border:2px solid #ffa500;
+    color: #ffa500;
+    font-size: 14px;
+}
+.btn:focus{
+    background-color: #ffa500;
+    color: #fff;
+    outline: 0;
+}
+p{
+    padding: 20px;
 }
