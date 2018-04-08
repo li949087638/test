@@ -254,7 +254,7 @@ $(function() {
         }
         poll.find(".list-item").css("box-shadow", "");
         poll_obj.css("background-color", "#999").off("click");
-        deal.find(".list-item").eq(poll_obj.find(".item-num").text()[0]-1).css("background-color", "#999");
+        deal.find(".list-item").eq(poll_obj.find(".item-num").text()[0] - 1).css("background-color", "#999");
         if (candidate === "幽灵") {
             yl_end++;
         } else if (candidate === "平民") {
@@ -276,16 +276,17 @@ $(function() {
             }
             $(".log-text:last").text(poll_obj.find(".item-num").text() + "玩家被投票投死，真实身份是" + poll_obj.find(".item-name").text() + "。");
             end.show();
-        } else if (pm.text()-pm_end == yl.text()) {
+        } else if (pm.text() - pm_end == yl.text() - yl_end) {
             poll.hide();
             title.text("游戏结果");
             end.find(".win-text").text("幽灵胜利");
             end.find("#yl-num").text(yl.text() - yl_end);
-            end.find("#pm-num").text(yl.text());
+            end.find("#pm-num").text(yl.text() - yl_end);
             end.find("#yl-word").text(ylw.val());
             end.find("#pm-word").text(pmw.val());
             for (var i = 0; i < (yl_end + pm_end); i++) {
                 end.append(end_log.clone());
+                $("#end .log-title:last").text("第" + (i + 1) + "天");
             }
             for (var i = 0; i < (yl_end + pm_end - 1); i++) {
                 $("#end").children(".end-log").eq(i).find(".log-text").text($(".day-content span").eq(i).text());
