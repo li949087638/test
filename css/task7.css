@@ -241,7 +241,7 @@ body {
 }
 
 .main {
-    padding: 75px 15px 15px;
+    padding: 75px 15px 85px;
 }
 
 a.lastgame {
@@ -509,9 +509,10 @@ input.range {
 
 .footer {
     position: fixed;
+    z-index: 1;
     bottom: 0;
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     background-color: #29bde0;
 }
 
