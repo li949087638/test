@@ -270,6 +270,7 @@ $(function() {
             end.find("#pm-word").text(pmw.val());
             for (var i = 0; i < (yl_end + pm_end); i++) {
                 end.append(end_log.clone());
+                $("#end .log-title:last").text("第" + (i + 1) + "天");
             }
             for (var i = 0; i < (yl_end + pm_end - 1); i++) {
                 $("#end").children(".end-log").eq(i).find(".log-text").text($(".day-content span").eq(i).text());
