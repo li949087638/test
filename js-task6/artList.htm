@@ -1,0 +1,82 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="inb mr-30">
+            <b>更新时间:</b>
+            <div class="date-range-box">
+                <input type="text" id="date-range" class="form-control date-range" placeholder="请选择日期范围">
+                <i class="glyphicon glyphicon-calendar"></i>
+            </div>
+        </div>
+        <div class="inb mr-30">
+            <b class="ws-25 auto-toggle">类 型:</b>
+            <select class="form-control select" ng-model="tempParams.type">
+                <option value="">全部</option>
+                <option value="0">首页Banner</option>
+                <option value="1">找职位Banner</option>
+                <option value="2">找精英Banner</option>
+                <option value="3">行业大图</option>
+            </select>
+        </div>
+        <div class="inb mr-30">
+            <b class="ws-25 auto-toggle">状 态:</b>
+            <select class="form-control select" ng-model="tempParams.status">
+                <option value="">全部</option>
+                <option value="1">草稿</option>
+                <option value="2">上线</option>
+            </select>
+        </div>
+        <div class="tr">
+            <button class="btn btn-danger" ng-click="clear()">清空</button>
+            <button class="btn btn-success" ng-click="search()">搜索</button>
+        </div>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <b>Article列表</b>
+        <a ui-sref="main.artAdd({id: -1})" class="btn btn-success btn-xs pull-right">+新增</a>
+    </div>
+    <div class="panel-body overflow-auto">
+        <table class="table table-striped tc">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>名称</th>
+                    <th>类型</th>
+                    <th>更新时间</th>
+                    <th>发布者</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="a in artData.articleList">
+                    <td>{{$index+1}}</td>
+                    <td>{{a.title}}</td>
+                    <td>{{a.type | filterType}}</td>
+                    <td>
+                        <div>{{a.updateAt | date:"yyyy-MM-dd"}}</div>
+                        <div>{{a.updateAt | date:"HH:mm:ss"}}</div>
+                    </td>
+                    <td>{{a.author}}</td>
+                    <td>{{a.status | filterState}}</td>
+                    <td><a href="" ng-click="offline(a.id)" ng-if="a.status==2">下线</a><a href="" ng-click="online(a.id)" ng-if="a.status==1">上线</a><a ui-sref="main.artAdd({id: a.id})">编辑</a><a href="" ng-click="delete(a.id)">删除</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="art-pages">
+            <div class="inb"> 每页显示
+                <input type="text" ng-model="searchParams.size"> 条 <button class="btn btn-default" ng-click="firstPage()" ng-disabled="artData.page==1">首页</button>
+            </div>
+            <ul class="pagination va-middle">
+                <li ng-class="{disabled: artData.page==1}"><a ng-click="pagePrev()">&lt;</a></li>
+                <li ng-class="{active: a==artData.page}" ng-repeat="a in repeat()"><a ng-click="pageJump(a)">{{a}}</a></li>
+                <li ng-class="{disabled: artData.page==pages()}"><a ng-click="pageNext()">&gt;</a></li>
+            </ul>
+            <div class="inb">
+                <button class="btn btn-default" ng-click="lastPage()" ng-disabled="artData.page==pages()">末页</button> 去第
+                <input type="text" ng-model="searchParams.page"> 页 <a class="btn btn-default" ng-click="ok()">确定</a>
+            </div>
+        </div>
+    </div>
+</div>

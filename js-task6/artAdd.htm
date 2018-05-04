@@ -1,0 +1,80 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <b>新增Article</b>
+    </div>
+    <div class="panel-body">
+        <div>
+            <b class="add-title">1、标题名称<span class="fs-25 c-red">*</span></b>
+            <input type="text" class="form-control add-input" ng-model="artParams.title">
+        </div>
+        <div>
+            <b class="add-title">2、类型<span class="fs-25 c-red">*</span></b>
+            <div class="auto-toggle">
+            <select class="form-control add-type" ng-model="artParams.type">
+                <option value="">请选择</option>
+                <option value="0">首页Banner</option>
+                <option value="1">找职位Banner</option>
+                <option value="2">找精英Banner</option>
+                <option value="3">行业大图</option>
+            </select>
+            <select class="form-control add-type" ng-model="artParams.industry" ng-if="artParams.type==3">
+                <option value="">请选择</option>
+                <option value="0">移动互联网</option>
+                <option value="1">电子商务</option>
+                <option value="2">企业服务</option>
+                <option value="3">O2O</option>
+                <option value="4">教育</option>
+                <option value="5">金融</option>
+                <option value="6">游戏</option>
+            </select>
+            </div>
+        </div>
+        <div>
+            <b class="add-title add-description">3、说明</b>
+            <div class="add-editor">
+                <div ng-model="artParams.content" editor style="height: 300px;"></div>
+            </div>
+        </div>
+        <div>
+            <b class="add-title">4、跳转链接<span class="fs-25 c-red">*</span></b>
+            <input type="text" class="form-control add-input" ng-model="artParams.url">
+        </div>
+        <div>
+            <b class="add-title">5、配图<span class="fs-25 c-red">*</span></b>
+            <label class="btn btn-primary">
+                <input type="file" nv-file-select uploader="uploader" accept="image/jpeg,image/png,image/gif">选择文件
+            </label>
+            <table class="table table-bordered tc add-ctrl">
+                <tr class="active">
+                    <th>文件名</th>
+                    <th>文件大小</th>
+                    <th>进度</th>
+                    <th>操作</th>
+                </tr>
+                <tr ng-repeat="item in uploader.queue">
+                    <td>{{item.file.name}}</td>
+                    <td>{{item.file.size/1024/1024 | number:2}} M</td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar" ng-style="{ 'width': item.progress + '%' }"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="btn btn-success btn-xs" ng-click="item.upload()">上传</button>&nbsp;
+                        <button class="btn btn-danger btn-xs" ng-click="item.remove()">删除</button>
+                    </td>
+                </tr>
+            </table>
+            <div class="add-ctrl add-img">
+                <img ng-src="{{artParams.img}}" alt="配图预览">
+            </div>
+        </div>
+        <div class="add-ctrl tr">
+            <button class="btn btn-primary" ng-disabled="!artParams.title||!artParams.type||!artParams.url||!artParams.img" ng-click="online()">立即上线</button>
+            <button class="btn btn-primary" ng-disabled="!artParams.title||!artParams.type||!artParams.url||!artParams.img" ng-click="draft()">存为草稿</button>
+            <a ui-sref="main.artList" class="btn btn-default">取消</a>
+            <br>
+            <span>带<span class="fs-25 c-red">*</span>为必填字段</span>
+        </div>
+    </div>
+</div>

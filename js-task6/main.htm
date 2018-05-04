@@ -1,0 +1,34 @@
+<div class="bg-img">
+    <nav class="navbar c-f" role="navigation">
+        <div class="nav-header">
+            <b>xxx后台管理系统</b>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+                <i class="icon-bar"></i>
+                <i class="icon-bar"></i>
+                <i class="icon-bar"></i>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="nav">
+                <li ng-repeat="a in navList">
+                    <a ng-class="{active: a.show}" ng-click="navOpen(a)">
+                        <i class="glyphicon glyphicon-pencil icon-l"></i>
+                        {{a.name}}
+                        <i class="glyphicon glyphicon-menu-left icon-r"></i>
+                    </a>
+                    <div ng-show="a.show">
+                        <a href="{{y}}" class="nav-item" ng-class="{active:navUrl==y.slice(6)}" ng-repeat="(x,y) in a.item" ng-click="navSelect(y)">{{x}}</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="header">
+        <a href="##">管理员</a>|<a href="##">admin</a>|<a href="##" ng-click="logout()"><span class="glyphicon glyphicon-off c-orange"></span> 退出</a>
+    </div>
+    <div class="content">
+        <div ui-view>
+            <b class="fs-25">Welcome!</b>
+        </div>
+    </div>
+</div>

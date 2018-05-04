@@ -1,0 +1,16 @@
+<div class="bg-img flex-center">
+    <form role="form" class="login tc" name="form" novalidate>
+        <img src="../images/jstask6-4.png" class="img-4">
+        <div class="login-title c-orange">xxx后台管理系统</div>
+        <div class="input-container">
+            <input type="text" ng-model="loginData.name" class="form-control" placeholder="用户名" name="name" ng-minlength="5" ng-maxlength="16" required>
+            <div class="img-1"></div>
+        </div>
+        <div class="input-container">
+            <input type="password" ng-model="loginData.pwd" class="form-control" placeholder="密码" name="pwd" ng-minlength="6" ng-maxlength="16" required>
+            <div class="img-2"></div>
+        </div>
+        <div class="message">{{msg}}</div>
+        <button type="submit" class="btn btn-warning btn-login" ng-click="login(form)">登录</button>
+    </form>
+</div>
