@@ -28,9 +28,14 @@ header p {
 .panel-title{
     text-align: center;
 }
-.btn {
+.panel .btn {
     width: 60%;
     margin: 0 20%;
     position: absolute;
     bottom: 10px;
+}
+
+.btn-foot {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
