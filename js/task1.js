@@ -6,6 +6,7 @@ var btn = document.getElementsByTagName("button"),
     t;
 
 function start() {
+    clearTimeout(t);
     var r1 = Math.floor(Math.random() * 9),
         r4 = Math.floor(Math.random() * 9),
         r2, r3, r5, r6;
