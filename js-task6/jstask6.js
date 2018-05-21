@@ -22,7 +22,7 @@ angular.module("app", ["ui.router", "ngCookies", "angularFileUpload"])
                 }, 2666);
             } else {
                 //发送请求（跨域）
-                $http.post("http://li949087638.w3.luyouxia.net/task5/a/login", $scope.loginData)
+                $http.post("https://bird.ioliu.cn/v1/?url=http://dev.admin.carrots.ptteng.com/a/login", $scope.loginData)
                     .then(function(res) {
                         if (res.data.code === 0) {
                             $scope.msg = "正在登陆...";
@@ -67,7 +67,7 @@ angular.module("app", ["ui.router", "ngCookies", "angularFileUpload"])
 
         //退出登录
         $scope.logout = function() {
-            $http.post("http://li949087638.w3.luyouxia.net/task5/a/logout")
+            $http.post("https://bird.ioliu.cn/v1/?url=http://dev.admin.carrots.ptteng.com/a/logout")
                 .then(function(response) {
                     if (response.data.code === 0) {
                         $cookies.remove("login");
@@ -117,7 +117,7 @@ angular.module("app", ["ui.router", "ngCookies", "angularFileUpload"])
 
         //article默认列表
         $scope.request = function() {
-            $http.get("http://li949087638.w3.luyouxia.net/task5/a/article/search", { params: $scope.searchParams })
+            $http.get("https://bird.ioliu.cn/v1/?url=http://dev.admin.carrots.ptteng.com/a/article/search", { params: $scope.searchParams })
                 .then(function(res) {
                     if (res.data.code === 0) {
                         $scope.artData = res.data.data;
@@ -160,17 +160,17 @@ angular.module("app", ["ui.router", "ngCookies", "angularFileUpload"])
                     id: id,
                     status: 1
                 };
-                $http.put("http://li949087638.w3.luyouxia.net/task5/a/u/article/status", data)
+                $http.put("https://bird.ioliu.cn/v1/?url=http://dev.admin.carrots.ptteng.com/a/u/article/status", data)
                     .then(function(res) {
                         if (res.data.code === 0) {
                             alert("操作成功");
                             console.log(res.data);
+                            $scope.request();
                         } else {
                             alert("下线操作失败，请联系管理员");
                             console.log(res.data);
                         }
                     });
-                $scope.request();
             }
         };
 
@@ -180,34 +180,34 @@ angular.module("app", ["ui.router", "ngCookies", "angularFileUpload"])
                     id: id,
                     status: 2
                 };
-                $http.put("http://li949087638.w3.luyouxia.net/task5/a/u/article/status", data)
+                $http.put("https://bird.ioliu.cn/v1/?url=http://dev.admin.carrots.ptteng.com/a/u/article/status", data)
                     .then(function(res) {
                         if (res.data.code === 0) {
                             alert("操作成功");
                             console.log(res.data);
+                            $scope.request();
                         } else {
                             alert("上线操作失败，请联系管理员");
                             console.log(res.data);
                         }
                     });
-                $scope.request();
             }
         };
 
         $scope.delete = function(id) {
             if (confirm("是否执行删除操作？")) {
-                let url = "http://li949087638.w3.luyouxia.net/task5/a/u/article/" + id;
+                let url = "https://bird.ioliu.cn/v1/?url=http://dev.admin.carrots.ptteng.com/a/u/article/" + id;
                 $http.delete(url)
                     .then(function(res) {
                         if (res.data.code === 0) {
                             alert("操作成功");
                             console.log(res.data);
+                            $scope.request();
                         } else {
                             alert("删除操作失败，请联系管理员");
                             console.log(res.data);
                         }
                     });
-                $scope.request();
             }
         };
 
@@ -292,7 +292,7 @@ angular.module("app", ["ui.router", "ngCookies", "angularFileUpload"])
 
         // 判断是新增article，还是编辑article，id=-1代表新增，编辑则根据id请求数据并显示
         if ($stateParams.id != -1) {
-            let url = "http://li949087638.w3.luyouxia.net/task5/a/article/" + $stateParams.id;
+            let url = "https://bird.ioliu.cn/v1/?url=http://dev.admin.carrots.ptteng.com/a/article/" + $stateParams.id;
             $http.get(url)
                 .then(function(res) {
                     if (res.data.code === 0) {
@@ -307,13 +307,13 @@ angular.module("app", ["ui.router", "ngCookies", "angularFileUpload"])
                         $scope.artParams.updateAt = res.data.data.article.updateAt;
                     } else {
                         console.log("Article获取出错");
-                            console.log(res.data);
+                        console.log(res.data);
                     }
                 });
         }
 
         // 图片上传插件
-        $scope.uploader = new FileUploader({ url: "http://li949087638.w3.luyouxia.net/task5/a/u/img/task" });
+        $scope.uploader = new FileUploader({ url: "https://bird.ioliu.cn/v1/?url=http://dev.admin.carrots.ptteng.com/a/u/img/task" });
         $scope.uploader.onSuccessItem = function(fileItem, response, status, headers) {
             if (status === 200) {
                 $scope.artParams.img = response.data.url;
@@ -325,7 +325,7 @@ angular.module("app", ["ui.router", "ngCookies", "angularFileUpload"])
         // 向服务器发送请求，id=-1代表新增，否则为编辑
         $scope.request = function() {
             if ($stateParams.id != -1) {
-                let url = "http://li949087638.w3.luyouxia.net/task5/a/u/article/" + $stateParams.id;
+                let url = "https://bird.ioliu.cn/v1/?url=http://dev.admin.carrots.ptteng.com/a/u/article/" + $stateParams.id;
                 $http.put(url, $scope.artParams)
                     .then(function(res) {
                         if (res.data.code === 0) {
@@ -338,7 +338,7 @@ angular.module("app", ["ui.router", "ngCookies", "angularFileUpload"])
                         }
                     });
             } else {
-                $http.post("http://li949087638.w3.luyouxia.net/task5/a/u/article", $scope.artParams)
+                $http.post("https://bird.ioliu.cn/v1/?url=http://dev.admin.carrots.ptteng.com/a/u/article", $scope.artParams)
                     .then(function(res) {
                         if (res.data.code === 0) {
                             alert("操作成功");
